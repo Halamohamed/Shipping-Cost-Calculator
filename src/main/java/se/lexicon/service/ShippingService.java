@@ -1,7 +1,9 @@
 package se.lexicon.service;
 
+import org.springframework.stereotype.Component;
 import se.lexicon.model.ShippingRequest;
 
+@Component
 public class ShippingService {
     private final ShippingCalculatorFactory factory;
 
