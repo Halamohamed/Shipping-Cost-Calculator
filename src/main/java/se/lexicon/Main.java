@@ -1,9 +1,11 @@
 package se.lexicon;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import se.lexicon.calculator.ExpressInternationalShipping;
 import se.lexicon.calculator.StandardDomesticShipping;
 import se.lexicon.configuration.AppConfig;
+import se.lexicon.configuration.ModernAppConfig;
 import se.lexicon.model.Destination;
 import se.lexicon.model.ShippingRequest;
 import se.lexicon.model.Speed;
@@ -16,7 +18,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        AnnotationConfigApplicationContext context =  new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext context =  new AnnotationConfigApplicationContext(ModernAppConfig.class);
 
         ShippingService service = context.getBean(ShippingService.class);
         ShippingRequest domesticStandardRequest = new ShippingRequest(Destination.DOMESTIC, Speed.STANDARD, 10.0);

@@ -1,9 +1,10 @@
 package se.lexicon.service;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import se.lexicon.model.ShippingRequest;
 
-@Component
+@Service
 public class ShippingService {
     private final ShippingCalculatorFactory factory;
 

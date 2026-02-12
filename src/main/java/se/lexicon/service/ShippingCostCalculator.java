@@ -7,6 +7,3 @@ public interface ShippingCostCalculator {
 
     double calculate(ShippingRequest req);
 }
-
-
-

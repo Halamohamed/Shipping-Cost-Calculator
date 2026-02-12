@@ -10,10 +10,10 @@ import se.lexicon.service.ShippingCostCalculator;
 @Component
 public class ExpressInternationalShipping implements ShippingCostCalculator {
 
-    @Value("${shipping.domestic.express.perKg}")
+    @Value("${shipping.international.express.perKg}")
     private double costPerKg ;
 
-    @Value("${shipping.domestic.express.base}")
+    @Value("${shipping.international.express.base}")
     private double baseCost ;
     public boolean supports(ShippingRequest r) {
         return r.destination() == Destination.INTERNATIONAL && r.speed() == Speed.EXPRESS;

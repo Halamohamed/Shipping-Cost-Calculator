@@ -1,6 +1,7 @@
 package se.lexicon.calculator;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import se.lexicon.model.Destination;
 import se.lexicon.model.ShippingRequest;
@@ -8,6 +9,7 @@ import se.lexicon.model.Speed;
 import se.lexicon.service.ShippingCostCalculator;
 
 @Component
+@Primary
 public class StandardDomesticShipping implements ShippingCostCalculator {
 
    @Value("${shipping.domestic.standard.perKg}")
